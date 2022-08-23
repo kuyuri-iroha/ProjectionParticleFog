@@ -1,0 +1,721 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2008336017066934176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2008336017066934236}
+  - component: {fileID: 2008336017066934237}
+  - component: {fileID: 2008336017066934179}
+  m_Layer: 26
+  m_Name: BeamCylinderCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2008336017066934236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008336017066934176}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 8.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2008336017563508613}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!20 &2008336017066934237
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008336017066934176}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.01
+  far clip plane: 9.54
+  field of view: 20
+  orthographic: 1
+  orthographic size: 6.5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 67108928
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 8400000, guid: 90ef08333faa56e4484c19fee016773f, type: 2}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!114 &2008336017066934179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008336017066934176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 0
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!1 &2008336017563508618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2008336017563508613}
+  - component: {fileID: 8775472904612370663}
+  m_Layer: 0
+  m_Name: ScrollFloatSmokeProjection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2008336017563508613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008336017563508618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2008336017066934236}
+  - {fileID: 5072381181312935905}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8775472904612370663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008336017563508618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e825c7563fb574d8d1cb53cf4b7855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectionFog: {fileID: 5072381181312935710}
+  beamCylinderCamera: {fileID: 2008336017066934237}
+  projectionTargets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 2008336017066934236}
+  projectionTargetLayer: SmokeTarget
+  mistBoundarySize: {x: 13, y: 1, z: 13}
+  blurIteration: 4
+--- !u!1 &5072381181312935708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5072381181312935905}
+  - component: {fileID: 5072381181312935710}
+  - component: {fileID: 5072381181312935711}
+  m_Layer: 0
+  m_Name: ScrollFloatSmokeVFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5072381181312935905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5072381181312935708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 2008336017563508613}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!2083052967 &5072381181312935710
+VisualEffect:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5072381181312935708}
+  m_Enabled: 1
+  m_Asset: {fileID: 8926484042661614526, guid: 1a93d384c2b7fd745a5474ccd2de03b6, type: 3}
+  m_InitialEventName: OnPlay
+  m_InitialEventNameOverriden: 0
+  m_StartSeed: 0
+  m_ResetSeedOnPlay: 1
+  m_ResourceVersion: 1
+  m_PropertySheet:
+    m_Float:
+      m_Array:
+      - m_Value: 10
+        m_Name: BeamLightMapIntensity
+        m_Overridden: 1
+      - m_Value: 2
+        m_Name: ParticleSize
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: LightingDepth
+        m_Overridden: 1
+      - m_Value: 0.779
+        m_Name: BackFogThreshold
+        m_Overridden: 1
+      - m_Value: 20
+        m_Name: Intensity
+        m_Overridden: 1
+      - m_Value: 1
+        m_Name: Brightness
+        m_Overridden: 1
+      - m_Value: 0.74
+        m_Name: LowLimit
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: Alpha
+        m_Overridden: 1
+      - m_Value: 0.019
+        m_Name: ContoursThreshold
+        m_Overridden: 1
+      - m_Value: 20
+        m_Name: LifeTime
+        m_Overridden: 1
+      - m_Value: 19.63
+        m_Name: FlipbookFPS
+        m_Overridden: 1
+      - m_Value: 4
+        m_Name: FlipbookDuration
+        m_Overridden: 1
+      - m_Value: 2
+        m_Name: SizeMax
+        m_Overridden: 1
+      - m_Value: 2
+        m_Name: SizeMin
+        m_Overridden: 1
+      - m_Value: 1
+        m_Name: LinearDragCoefficient
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: TurbulenceIntensity
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: TurbulenceDrag
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: TurbulenceFrequency
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: TurbulenceLacunarity
+        m_Overridden: 1
+      - m_Value: 0.1
+        m_Name: Gravity
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: AddAlpha
+        m_Overridden: 1
+      - m_Value: 4
+        m_Name: FlipbookDurationMin
+        m_Overridden: 0
+      - m_Value: 8
+        m_Name: FlipbookDurationMax
+        m_Overridden: 0
+      - m_Value: 0
+        m_Name: AddBaseAlpha
+        m_Overridden: 1
+      - m_Value: 4
+        m_Name: SpawnAreaCircle_arc
+        m_Overridden: 1
+      - m_Value: 9
+        m_Name: SpawnAreaCircle_circle_radius
+        m_Overridden: 1
+      - m_Value: 0.1
+        m_Name: RangeScaleMin
+        m_Overridden: 1
+      - m_Value: 8
+        m_Name: AroundAreaThickness
+        m_Overridden: 1
+      - m_Value: 4.52
+        m_Name: Freq
+        m_Overridden: 1
+      - m_Value: 10
+        m_Name: LifeTime1Min
+        m_Overridden: 1
+      - m_Value: 15
+        m_Name: LifeTime1Max
+        m_Overridden: 1
+      - m_Value: 10
+        m_Name: LifeTime2Min
+        m_Overridden: 1
+      - m_Value: 10
+        m_Name: AroundLifeTimeMin
+        m_Overridden: 1
+      - m_Value: 0.2
+        m_Name: UVScrollSpeed
+        m_Overridden: 1
+    m_Vector2f:
+      m_Array: []
+    m_Vector3f:
+      m_Array:
+      - m_Value: {x: 13, y: 1, z: 13}
+        m_Name: BoundaryBox_size
+        m_Overridden: 1
+      - m_Value: {x: 0, y: 0, z: 0}
+        m_Name: BoundaryBox_center
+        m_Overridden: 1
+      - m_Value: {x: 0, y: -0.5, z: -0.74}
+        m_Name: PositionOffset_position
+        m_Overridden: 1
+      - m_Value: {x: 7, y: 0, z: 2}
+        m_Name: SpawnArea_size
+        m_Overridden: 1
+      - m_Value: {x: 0, y: 0.3, z: -7}
+        m_Name: SpawnArea_center
+        m_Overridden: 1
+      - m_Value: {x: 10, y: 0, z: 1}
+        m_Name: SpawnArea2_size
+        m_Overridden: 1
+      - m_Value: {x: 0, y: 0.3, z: 5}
+        m_Name: SpawnArea2_center
+        m_Overridden: 1
+      - m_Value: {x: 1, y: 0, z: -1}
+        m_Name: Direction2A
+        m_Overridden: 1
+      - m_Value: {x: -1, y: 0, z: -1}
+        m_Name: Direction2B
+        m_Overridden: 1
+      - m_Value: {x: 1, y: 0, z: 1}
+        m_Name: DirectionA
+        m_Overridden: 1
+      - m_Value: {x: -1, y: 0, z: 1}
+        m_Name: DirectionB
+        m_Overridden: 1
+      - m_Value: {x: 90, y: 65, z: 0}
+        m_Name: SpawnAreaCircle_circle_transform_angles
+        m_Overridden: 1
+      - m_Value: {x: -2, y: -2, z: -2}
+        m_Name: TargetRandomizeMin
+        m_Overridden: 1
+      - m_Value: {x: 2, y: 2, z: 2}
+        m_Name: TargetRandomizeMax
+        m_Overridden: 1
+      - m_Value: {x: -1, y: 0, z: -1.8}
+        m_Name: RadomizeVelocity2B
+        m_Overridden: 1
+    m_Vector4f:
+      m_Array:
+      - m_Value: {x: 0, y: 0, z: 0, w: 0}
+        m_Name: SpecularBaseColor
+        m_Overridden: 1
+      - m_Value: {x: 1, y: 1, z: 1, w: 1}
+        m_Name: BaseColor
+        m_Overridden: 1
+      - m_Value: {x: 0, y: 0, z: 0, w: 0}
+        m_Name: AdditiveColor
+        m_Overridden: 1
+    m_Uint:
+      m_Array: []
+    m_Int:
+      m_Array:
+      - m_Value: 5000
+        m_Name: BurstCount
+        m_Overridden: 1
+      - m_Value: 200
+        m_Name: SpawnRate
+        m_Overridden: 1
+      - m_Value: 1
+        m_Name: TurbulenceOctaves
+        m_Overridden: 0
+      - m_Value: 20
+        m_Name: AroundSpawnRate
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: Smoke2SpawnRate
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: Smoke1SpawnRate
+        m_Overridden: 1
+    m_Matrix4x4f:
+      m_Array: []
+    m_AnimationCurve:
+      m_Array:
+      - m_Value:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0.27830505
+            outSlope: 0.27830505
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.5
+            value: 0.13915253
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: -0.27830505
+            outSlope: -0.27830505
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_Name: LifeTimeAlphaCurve
+        m_Overridden: 1
+      - m_Value:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: -0.008495331
+            value: 0.0042419434
+            inSlope: 0.055442378
+            outSlope: 0.055442378
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0.1037345
+          - serializedVersion: 3
+            time: 3.2582312
+            value: 1
+            inSlope: 0.70689213
+            outSlope: 0.70689213
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.051867135
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_Name: RangeRandomizeCurve
+        m_Overridden: 1
+      - m_Value:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_Name: LifeTimeSizeCurve
+        m_Overridden: 1
+    m_Gradient:
+      m_Array: []
+    m_NamedObject:
+      m_Array:
+      - m_Value: {fileID: 8400000, guid: 90ef08333faa56e4484c19fee016773f, type: 2}
+        m_Name: BeamLightMap
+        m_Overridden: 1
+      - m_Value: {fileID: 18700000, guid: e4b08da41d9701e44a87fee6afe2038a, type: 3}
+        m_Name: SmokeFlipbook
+        m_Overridden: 0
+    m_Bool:
+      m_Array:
+      - m_Value: 0
+        m_Name: InverseV
+        m_Overridden: 1
+--- !u!73398921 &5072381181312935711
+VFXRenderer:
+  serializedVersion: 1
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5072381181312935708}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
