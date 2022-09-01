@@ -19,9 +19,13 @@ public class ParticleFogProjectionManager : MonoBehaviour
     private RenderTexture[] renderTextures = new RenderTexture[30];
 
     private readonly List<string> beforeLayerMasks = new List<string>();
+
+    private bool isParameterErrorOcurred = true;
     
     private void Update()
     {
+        if (isParameterErrorOcurred) return;
+        
         if (this.beamCylinderCamera != null)
         {
             this.beamCylinderCamera.Render();
@@ -50,6 +54,31 @@ public class ParticleFogProjectionManager : MonoBehaviour
 
     private void OnValidate()
     {
+        // プロパティのエラーチェック
+        isParameterErrorOcurred = false;
+        foreach (var projectionFog in this.projectionFogs)
+        {
+            var properties = new List<VFXExposedProperty>();
+            projectionFog.visualEffectAsset.GetExposedProperties(properties);
+            
+            if (!properties.Exists(x => x.name == "InterpolationCoefficient"))
+            {
+                Debug.LogError("InterpolationCoefficient is not found in " + projectionFog.name);
+                isParameterErrorOcurred = true;
+            }
+            if (!properties.Exists(x => x.name == "CameraUp"))
+            {
+                Debug.LogError("CameraUp is not found in " + projectionFog.name);
+                isParameterErrorOcurred = true;
+            }
+            if (!properties.Exists(x => x.name == "BoundaryBox_size"))
+            {
+                Debug.LogError("BoundaryBox_size is not found in " + projectionFog.name);
+                isParameterErrorOcurred = true;
+            }
+        }
+        
+        if(isParameterErrorOcurred) return;
         if (this.projectionFogs != null && this.beamCylinderCamera != null)
         {
             this.beamCylinderCamera.orthographicSize = this.boundarySize.x / 2.0f;
