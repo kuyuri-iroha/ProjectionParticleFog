@@ -482,10 +482,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4840379479047268820, guid: 679eb3c954cea244a8dc2f8ea445681f, type: 3}
-      propertyPath: m_Asset
-      value: 
-      objectReference: {fileID: 8926484042661614526, guid: 4d737c3a9e2e29a44b375ef417666be9, type: 3}
-    - target: {fileID: 4840379479047268820, guid: 679eb3c954cea244a8dc2f8ea445681f, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.size
       value: 50
       objectReference: {fileID: 0}
@@ -593,6 +589,10 @@ PrefabInstance:
     - target: {fileID: 7688809917415695550, guid: f6fd163f9fcdfcf4682f8423d5cd8c2a, type: 3}
       propertyPath: m_Name
       value: ParticleFogProjectionManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688809917994189972, guid: f6fd163f9fcdfcf4682f8423d5cd8c2a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6fd163f9fcdfcf4682f8423d5cd8c2a, type: 3}

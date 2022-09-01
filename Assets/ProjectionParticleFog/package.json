@@ -1,0 +1,19 @@
+﻿{
+  "name": "com.kuyuri-iroha.projection-particle-fog",
+  "version": "0.0.1",
+  "description": "テクスチャを投影可能なパーティクルフォグ",
+  "displayName": "Projection Particle Fog",
+  "unity": "2021.3",
+  "dependencies": {
+    "com.unity.render-pipelines.universal": "12.1.7",
+    "com.unity.shadergraph": "12.1.7",
+    "com.unity.visualeffectgraph": "12.1.7"
+  },
+  "samples": [
+    {
+      "displayName": "Sample",
+      "description": "動作サンプル",
+      "path": "Samples~/Sample"
+    }
+  ]
+}
