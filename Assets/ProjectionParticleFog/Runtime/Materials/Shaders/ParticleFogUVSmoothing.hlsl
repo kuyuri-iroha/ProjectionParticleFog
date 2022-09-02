@@ -5,8 +5,6 @@ void SmoothingPosition_float(float3 BasePosition, float2 UV, float Size, float2 
 {
     Smoothed = BasePosition;
     float2 uv = (UV * float2(2.0f, 2.0f) - float2(1.0f, 1.0f)) * Size * Coefficient;
-    uv.x = uv.x * -1.0f;
-    uv.y = uv.y * -1.0f;
     if(PlaneMode < 1)
     {
         Smoothed += float3(uv.x, 0, uv.y);
