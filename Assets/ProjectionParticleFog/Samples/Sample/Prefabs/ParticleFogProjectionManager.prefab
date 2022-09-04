@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 7688809917994190057}
   - component: {fileID: 7688809917994189975}
   m_Layer: 0
-  m_Name: BeamCylinderCamera
+  m_Name: ProjectionCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

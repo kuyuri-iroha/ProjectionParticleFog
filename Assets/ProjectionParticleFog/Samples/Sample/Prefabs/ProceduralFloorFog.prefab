@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2204448543539040591}
   m_Layer: 0
-  m_Name: ScrollFloorSmokeWithCameraFade
+  m_Name: ProceduralFloorFog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,9 +44,9 @@ GameObject:
   - component: {fileID: 4840379479047268820}
   - component: {fileID: 4840379479047268821}
   m_Layer: 2
-  m_Name: ScrollFloorSmokeVFX
+  m_Name: ProceduralFloorFogVFX
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
