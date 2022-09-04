@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -13,7 +14,8 @@ public class ParticleFogProjectionManager : MonoBehaviour
     [SerializeField] private List<VisualEffect> projectionFogs = new List<VisualEffect>();
     [SerializeField] private Camera beamCylinderCamera;
 
-    [SerializeField] private Vector3 boundarySize = new Vector3(20, 3, 20);
+    [SerializeField] private float size = 6.5f;
+    [SerializeField] private float depth = 13;
     [SerializeField, Range(0, 30)] private int blurIteration = 3;
     
     private RenderTexture[] renderTextures = new RenderTexture[30];
@@ -44,7 +46,7 @@ public class ParticleFogProjectionManager : MonoBehaviour
             var upCoefficient = Mathf.Abs(Vector3.Dot(cameraTransform.up, projectionCamera.up));
             var rightCoefficient = Mathf.Abs(Vector3.Dot(cameraTransform.right, projectionCamera.right));
             
-            foreach (var projectionFog in this.projectionFogs)
+            foreach (var projectionFog in this.projectionFogs.Where(projectionFog => projectionFog != null))
             {
                 projectionFog.SetVector2("InterpolationCoefficient", new Vector2(upCoefficient, rightCoefficient));
                 projectionFog.SetVector3("CameraUp", cameraTransform.up);
@@ -56,7 +58,7 @@ public class ParticleFogProjectionManager : MonoBehaviour
     {
         // プロパティのエラーチェック
         isParameterErrorOcurred = false;
-        foreach (var projectionFog in this.projectionFogs)
+        foreach (var projectionFog in this.projectionFogs.Where(projectionFog => projectionFog != null))
         {
             var properties = new List<VFXExposedProperty>();
             projectionFog.visualEffectAsset.GetExposedProperties(properties);
@@ -81,11 +83,11 @@ public class ParticleFogProjectionManager : MonoBehaviour
         if(isParameterErrorOcurred) return;
         if (this.projectionFogs != null && this.beamCylinderCamera != null)
         {
-            this.beamCylinderCamera.orthographicSize = this.boundarySize.x / 2.0f;
-            foreach (var projectionFog in this.projectionFogs)
+            this.beamCylinderCamera.orthographicSize = size;
+            this.beamCylinderCamera.farClipPlane = depth;
+            foreach (var projectionFog in this.projectionFogs.Where(projectionFog => projectionFog != null))
             {
-                projectionFog.SetVector3("BoundaryBox_size", this.boundarySize);
-                projectionFog.Reinit();
+                projectionFog.SetVector3("BoundaryBox_size", new Vector3(size * 2, depth, size * 2));
             }
         }
     }

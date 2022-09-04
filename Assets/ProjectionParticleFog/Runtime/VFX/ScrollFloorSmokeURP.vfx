@@ -17,12 +17,12 @@ MonoBehaviour:
   categories:
   - name: EmitParamters
     collapsed: 0
-  - name: ShaderParamters
-    collapsed: 0
   - name: ProjectionParameters
     collapsed: 0
-  - name: ForScripts
+  - name: ShaderParamters
     collapsed: 0
+  - name: ForScripts
+    collapsed: 1
   uiBounds:
     serializedVersion: 2
     x: -1037
@@ -169,8 +169,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: EmitScatteringMinMax
-    path: EmitScatteringMinMax
+  - name: EmitPositionRoughness
+    path: EmitPositionRoughness
     tooltip: 
     sheetType: m_Vector2f
     realType: Vector2
@@ -179,6 +179,75 @@ MonoBehaviour:
         m_SerializableType: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
       m_SerializableObject: '{"x":0.0,"y":0.0}'
+    min: -Infinity
+    max: Infinity
+    enumValues: []
+    descendantCount: 0
+  - name: ProjectionParameters
+    path: 
+    tooltip: 
+    sheetType: 
+    realType: 
+    defaultValue:
+      m_Type:
+        m_SerializableType: 
+      m_SerializableObject: 
+    min: -Infinity
+    max: Infinity
+    enumValues: []
+    descendantCount: 0
+  - name: BeamLightMap
+    path: BeamLightMap
+    tooltip: 
+    sheetType: m_NamedObject
+    realType: Texture2D
+    defaultValue:
+      m_Type:
+        m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      m_SerializableObject: '{"obj":{"fileID":8400000,"guid":"90ef08333faa56e4484c19fee016773f","type":2}}'
+    min: -Infinity
+    max: Infinity
+    enumValues: []
+    descendantCount: 0
+  - name: Intensity
+    path: Intensity
+    tooltip: 
+    sheetType: m_Float
+    realType: Single
+    defaultValue:
+      m_Type:
+        m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      m_SerializableObject: 1
+    min: -Infinity
+    max: Infinity
+    enumValues: []
+    descendantCount: 0
+  - name: EnableUVCorrection
+    path: EnableUVCorrection
+    tooltip: 
+    sheetType: m_Bool
+    realType: Boolean
+    defaultValue:
+      m_Type:
+        m_SerializableType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      m_SerializableObject: True
+    min: -Infinity
+    max: Infinity
+    enumValues: []
+    descendantCount: 0
+  - name: LowCutThreshold
+    path: LowCutThreshold
+    tooltip: 
+    sheetType: m_Vector4f
+    realType: Vector4
+    defaultValue:
+      m_Type:
+        m_SerializableType: UnityEngine.Vector4, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      m_SerializableObject: '{"x":0.10000000149011612,"y":0.10000000149011612,"z":0.10000000149011612,"w":0.10000000149011612}'
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -486,75 +555,6 @@ MonoBehaviour:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
       m_SerializableObject: 0
-    min: -Infinity
-    max: Infinity
-    enumValues: []
-    descendantCount: 0
-  - name: ProjectionParameters
-    path: 
-    tooltip: 
-    sheetType: 
-    realType: 
-    defaultValue:
-      m_Type:
-        m_SerializableType: 
-      m_SerializableObject: 
-    min: -Infinity
-    max: Infinity
-    enumValues: []
-    descendantCount: 0
-  - name: BeamLightMap
-    path: BeamLightMap
-    tooltip: 
-    sheetType: m_NamedObject
-    realType: Texture2D
-    defaultValue:
-      m_Type:
-        m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":8400000,"guid":"90ef08333faa56e4484c19fee016773f","type":2}}'
-    min: -Infinity
-    max: Infinity
-    enumValues: []
-    descendantCount: 0
-  - name: Intensity
-    path: Intensity
-    tooltip: 
-    sheetType: m_Float
-    realType: Single
-    defaultValue:
-      m_Type:
-        m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
-    min: -Infinity
-    max: Infinity
-    enumValues: []
-    descendantCount: 0
-  - name: EnableUVCorrection
-    path: EnableUVCorrection
-    tooltip: 
-    sheetType: m_Bool
-    realType: Boolean
-    defaultValue:
-      m_Type:
-        m_SerializableType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: True
-    min: -Infinity
-    max: Infinity
-    enumValues: []
-    descendantCount: 0
-  - name: LowCutThreshold
-    path: LowCutThreshold
-    tooltip: 
-    sheetType: m_Vector4f
-    realType: Vector4
-    defaultValue:
-      m_Type:
-        m_SerializableType: UnityEngine.Vector4, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":0.10000000149011612,"y":0.10000000149011612,"z":0.10000000149011612,"w":0.10000000149011612}'
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -1481,7 +1481,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614693}
   m_ExposedName: SizeMinMax
   m_Exposed: 1
-  m_Order: 9
+  m_Order: 3
   m_Category: EmitParamters
   m_Min:
     m_Type:
@@ -1633,7 +1633,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614697}
   m_ExposedName: LifeTimeMinMax
   m_Exposed: 1
-  m_Order: 4
+  m_Order: 1
   m_Category: EmitParamters
   m_Min:
     m_Type:
@@ -1921,7 +1921,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614745}
   m_ExposedName: CameraUp
   m_Exposed: 1
-  m_Order: 6
+  m_Order: 9
   m_Category: ForScripts
   m_Min:
     m_Type:
@@ -2103,7 +2103,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614750}
   m_ExposedName: InterpolationCoefficient
   m_Exposed: 1
-  m_Order: 11
+  m_Order: 13
   m_Category: ForScripts
   m_Min:
     m_Type:
@@ -2379,7 +2379,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615003}
   m_ExposedName: SimpleNoiseAnimation
   m_Exposed: 1
-  m_Order: 7
+  m_Order: 10
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -2595,7 +2595,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615009}
   m_ExposedName: SimplexNoiseAnimation
   m_Exposed: 1
-  m_Order: 13
+  m_Order: 15
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -2811,7 +2811,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615015}
   m_ExposedName: VoronoiAnimation
   m_Exposed: 1
-  m_Order: 19
+  m_Order: 20
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -3027,7 +3027,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615021}
   m_ExposedName: SimpleNoiseScale
   m_Exposed: 1
-  m_Order: 8
+  m_Order: 11
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -3107,7 +3107,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615023}
   m_ExposedName: SimplexNoiseScale
   m_Exposed: 1
-  m_Order: 14
+  m_Order: 16
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -3187,7 +3187,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615025}
   m_ExposedName: VoronoiScale
   m_Exposed: 1
-  m_Order: 21
+  m_Order: 22
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -3267,7 +3267,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615027}
   m_ExposedName: SimpleNoiseAmount
   m_Exposed: 1
-  m_Order: 10
+  m_Order: 12
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -3349,7 +3349,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615029}
   m_ExposedName: SimplexNoiseAmount
   m_Exposed: 1
-  m_Order: 15
+  m_Order: 17
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -3431,7 +3431,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615031}
   m_ExposedName: VoronoiAmount
   m_Exposed: 1
-  m_Order: 22
+  m_Order: 23
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -3513,7 +3513,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615033}
   m_ExposedName: SimpleNoiseRemap
   m_Exposed: 1
-  m_Order: 12
+  m_Order: 14
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -3595,7 +3595,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615035}
   m_ExposedName: SimplexNoiseRemap
   m_Exposed: 1
-  m_Order: 17
+  m_Order: 18
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -3677,7 +3677,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615037}
   m_ExposedName: VoronoiRemap
   m_Exposed: 1
-  m_Order: 24
+  m_Order: 25
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -3759,7 +3759,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615039}
   m_ExposedName: CombinedNoiseRemap
   m_Exposed: 1
-  m_Order: 25
+  m_Order: 26
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -4081,7 +4081,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615047}
   m_ExposedName: EmitPosition
   m_Exposed: 1
-  m_Order: 16
+  m_Order: 5
   m_Category: EmitParamters
   m_Min:
     m_Type:
@@ -5435,7 +5435,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615180}
   m_ExposedName: BeamLightMap
   m_Exposed: 1
-  m_Order: 18
+  m_Order: 19
   m_Category: ProjectionParameters
   m_Min:
     m_Type:
@@ -5595,7 +5595,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615202}
   m_ExposedName: BoundaryBox
   m_Exposed: 1
-  m_Order: 1
+  m_Order: 2
   m_Category: ForScripts
   m_Min:
     m_Type:
@@ -6792,7 +6792,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615281}
   m_ExposedName: InverseV
   m_Exposed: 1
-  m_Order: 23
+  m_Order: 24
   m_Category: ForScripts
   m_Min:
     m_Type:
@@ -6872,7 +6872,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615283}
   m_ExposedName: InverseU
   m_Exposed: 1
-  m_Order: 20
+  m_Order: 21
   m_Category: ForScripts
   m_Min:
     m_Type:
@@ -6945,14 +6945,14 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661615299}
-  m_ExposedName: EmitScatteringMinMax
+  m_ExposedName: EmitPositionRoughness
   m_Exposed: 1
-  m_Order: 26
+  m_Order: 7
   m_Category: EmitParamters
   m_Min:
     m_Type:
@@ -7746,14 +7746,14 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661615371}
   m_ExposedName: BaseColor
   m_Exposed: 1
-  m_Order: 2
+  m_Order: 4
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -7969,7 +7969,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615377}
   m_ExposedName: BaseIntensity
   m_Exposed: 1
-  m_Order: 3
+  m_Order: 6
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -8049,7 +8049,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615379}
   m_ExposedName: AgeAlphaCurve
   m_Exposed: 1
-  m_Order: 5
+  m_Order: 8
   m_Category: ShaderParamters
   m_Min:
     m_Type:
@@ -10628,7 +10628,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615478}
   m_ExposedName: LowCutThreshold
   m_Exposed: 1
-  m_Order: 35
+  m_Order: 34
   m_Category: ProjectionParameters
   m_Min:
     m_Type:

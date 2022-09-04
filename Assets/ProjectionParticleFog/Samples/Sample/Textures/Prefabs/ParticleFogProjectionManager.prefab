@@ -45,10 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e825c7563fb574d8d1cb53cf4b7855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectionFogs: []
+  projectionFogs:
+  - {fileID: 0}
   beamCylinderCamera: {fileID: 7688809917994190057}
-  boundarySize: {x: 13, y: 1, z: 13}
-  blurIteration: 3
+  size: 6.5
+  depth: 12
+  blurIteration: 0
 --- !u!1 &7688809917994189972
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,7 +62,7 @@ GameObject:
   - component: {fileID: 7688809917994190056}
   - component: {fileID: 7688809917994190057}
   - component: {fileID: 7688809917994189975}
-  m_Layer: 26
+  m_Layer: 0
   m_Name: BeamCylinderCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,14 +108,14 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 9.54
+  far clip plane: 12
   field of view: 20
   orthographic: 1
   orthographic size: 6.5
-  m_Depth: 0
+  m_Depth: 13
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 67108928
+    m_Bits: 51
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 90ef08333faa56e4484c19fee016773f, type: 2}
   m_TargetDisplay: 0

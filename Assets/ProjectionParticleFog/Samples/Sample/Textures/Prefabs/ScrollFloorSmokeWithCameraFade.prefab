@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4840379479047268651}
   - component: {fileID: 4840379479047268820}
   - component: {fileID: 4840379479047268821}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ScrollFloorSmokeVFX
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -58,9 +58,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4840379479047268822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.39, z: -0.35}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 0.01, z: 5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2204448543539040591}
   m_RootOrder: 0
@@ -94,7 +94,7 @@ VisualEffect:
       - m_Value: 0.937
         m_Name: BackFogThreshold
         m_Overridden: 1
-      - m_Value: 2
+      - m_Value: 0.36
         m_Name: Intensity
         m_Overridden: 1
       - m_Value: 1
@@ -217,7 +217,7 @@ VisualEffect:
       - m_Value: 0.126
         m_Name: SimplexNoiseRemap
         m_Overridden: 1
-      - m_Value: 0
+      - m_Value: 0.016
         m_Name: CombinedNoiseRemap
         m_Overridden: 1
       - m_Value: 0.82
@@ -229,17 +229,26 @@ VisualEffect:
       - m_Value: 0.727
         m_Name: FogBlendThreshold
         m_Overridden: 1
+      - m_Value: 0
+        m_Name: BaseIntensity
+        m_Overridden: 1
+      - m_Value: 5
+        m_Name: Size
+        m_Overridden: 1
     m_Vector2f:
       m_Array:
-      - m_Value: {x: 0.051649045, y: 0.99989516}
+      - m_Value: {x: 0.43657857, y: 0.9999955}
         m_Name: InterpolationCoefficient
         m_Overridden: 1
-      - m_Value: {x: 1, y: 3}
+      - m_Value: {x: 5, y: 5}
         m_Name: SizeMinMax
+        m_Overridden: 1
+      - m_Value: {x: 0, y: 0}
+        m_Name: EmitPositionRoughness
         m_Overridden: 1
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 13, y: 1, z: 13}
+      - m_Value: {x: 13, y: 12, z: 13}
         m_Name: BoundaryBox_size
         m_Overridden: 1
       - m_Value: {x: 0, y: 0, z: 0}
@@ -284,7 +293,7 @@ VisualEffect:
       - m_Value: {x: -1, y: 0, z: -1.8}
         m_Name: RadomizeVelocity2B
         m_Overridden: 1
-      - m_Value: {x: 0.00042115207, y: 0.9986652, z: -0.05164892}
+      - m_Value: {x: -0.001319072, y: 0.8996651, z: 0.43657863}
         m_Name: CameraUp
         m_Overridden: 1
       - m_Value: {x: 5, y: 1, z: 5}
@@ -295,11 +304,14 @@ VisualEffect:
       - m_Value: {x: 0, y: 0, z: 0, w: 0}
         m_Name: SpecularBaseColor
         m_Overridden: 1
-      - m_Value: {x: 1, y: 1, z: 1, w: 0.16470589}
+      - m_Value: {x: 1, y: 1, z: 1, w: 0.07058824}
         m_Name: BaseColor
         m_Overridden: 1
       - m_Value: {x: 0, y: 0, z: 0, w: 0}
         m_Name: AdditiveColor
+        m_Overridden: 1
+      - m_Value: {x: 0, y: 0, z: 0, w: 0}
+        m_Name: LowCutThreshold
         m_Overridden: 1
     m_Uint:
       m_Array: []
