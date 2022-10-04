@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ProjectionParticleFog
+namespace Kuyuri.ProjectionParticleFog
 {
     [ExecuteAlways]
     public class TestBeamLightAnimation : MonoBehaviour

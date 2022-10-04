@@ -1,0 +1,271 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="InterfaceMode" style="flex-direction: row; justify-content: center; height: auto;">
+        <ui:Button text="Basic" display-tooltip-when-elided="true" name="BasicMode" style="flex-grow: 1; margin-right: 0; padding-right: 0; border-top-right-radius: 0; border-bottom-right-radius: 0;" />
+        <ui:Button text="Advanced" display-tooltip-when-elided="true" name="AdvancedMode" style="flex-grow: 1; padding-left: 0; margin-left: 0; border-top-left-radius: 0; border-bottom-left-radius: 0;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="AdvancedModeContainer">
+        <ui:Foldout text="Emit Parameters" name="EmitParameters">
+            <ui:VisualElement name="EmitParamterContainer">
+                <uie:IntegerField label="Rate" value="40" name="Rate" binding-path="rate" />
+                <ui:VisualElement name="LifeTimeMinMaxSliderWithValue">
+                    <ui:Label text="Life Time Min-Max" display-tooltip-when-elided="true" name="MinMaxLabel" style="margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;" />
+                    <ui:VisualElement name="LimitContainer" style="flex-direction: row; justify-content: space-between; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;">
+                        <ui:VisualElement name="MinLimitContainer" style="flex-direction: row;">
+                            <ui:Label text="Min Limit" display-tooltip-when-elided="true" name="MinLimitLabel" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="MinLimit" focusable="true" binding-path="lifeTimeLimit.x" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="MaxLimitContainer" style="flex-direction: row;">
+                            <ui:Label text="Max Limit" display-tooltip-when-elided="true" name="MaxLimitLable" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="MaxLimit" binding-path="lifeTimeLimit.y" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:MinMaxSlider picking-mode="Ignore" min-value="10" max-value="12" low-limit="-10" high-limit="40" binding-path="lifeTimeMinMax" name="MinMaxSlider" />
+                    <ui:VisualElement name="ValueContainer" style="flex-direction: row; justify-content: space-between; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;">
+                        <ui:VisualElement name="MinContainer" style="flex-direction: row;">
+                            <ui:Label text="Min" display-tooltip-when-elided="true" name="MinLabel" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="Min" focusable="true" binding-path="lifeTimeMinMax.x" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="MaxContainer" style="flex-direction: row;">
+                            <ui:Label text="Max" display-tooltip-when-elided="true" name="MaxLable" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="Max" binding-path="lifeTimeMinMax.y" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="SizeMinMaxSliderWithValue">
+                    <ui:Label text="Size Min-Max" display-tooltip-when-elided="true" name="MinMaxLabel" style="margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;" />
+                    <ui:VisualElement name="LimitContainer" style="flex-direction: row; justify-content: space-between; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;">
+                        <ui:VisualElement name="MinLimitContainer" style="flex-direction: row;">
+                            <ui:Label text="Min Limit" display-tooltip-when-elided="true" name="MinLimitLabel" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="MinLimit" focusable="true" binding-path="sizeLimit.x" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="MaxLimitContainer" style="flex-direction: row;">
+                            <ui:Label text="Max Limit" display-tooltip-when-elided="true" name="MaxLimitLable" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="MaxLimit" binding-path="sizeLimit.y" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:MinMaxSlider picking-mode="Ignore" min-value="10" max-value="12" low-limit="-10" high-limit="40" name="MinMaxSlider" binding-path="sizeMinMax" />
+                    <ui:VisualElement name="ValueContainer" style="flex-direction: row; justify-content: space-between; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;">
+                        <ui:VisualElement name="MinContainer" style="flex-direction: row;">
+                            <ui:Label text="Min" display-tooltip-when-elided="true" name="MinLabel" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="Min" focusable="true" binding-path="sizeMinMax.x" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="MaxContainer" style="flex-direction: row;">
+                            <ui:Label text="Max" display-tooltip-when-elided="true" name="MaxLable" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="Max" binding-path="sizeMinMax.y" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Foldout>
+        <ui:Foldout text="Projection Parameters" name="ProjectionParameters">
+            <ui:VisualElement name="ProjectionParameterContainer">
+                <uie:ObjectField label="Beam Light Map" name="BeamLightMap" type="UnityEngine.Texture, UnityEngine.CoreModule" binding-path="beamLightMap" />
+                <uie:FloatField label="Intensity" value="2.75" name="Intensity" binding-path="intensity" />
+                <ui:Toggle label="Enable UV Correction" value="true" name="EnableUVCorrection" binding-path="enableUvCorrection" />
+                <uie:ColorField label="Low Cut Threshold" value="#00000000" name="LowCutThreshold" binding-path="lowCutThreshold" />
+            </ui:VisualElement>
+        </ui:Foldout>
+        <ui:Foldout text="Shader Parameters" name="ShaderParameters">
+            <ui:VisualElement name="ShaderParametersContainer">
+                <uie:ColorField label="Base Color" value="#FFFFFFFF" name="BaseColor" hdr="true" binding-path="baseColor" />
+                <uie:FloatField label="Base Intensity" value="0" name="BaseIntensity" binding-path="baseIntensity" />
+                <uie:CurveField label="Age Alpha Curve" name="AgeAlphaCurve" binding-path="ageAlphaCurve" />
+                <ui:VisualElement name="SimpleNoise">
+                    <ui:VisualElement name="SimpleNoiseAnimation" style="flex-direction: row; justify-content: flex-start; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;">
+                        <ui:Label text="Simple Noise Animation" display-tooltip-when-elided="true" style="margin-left: 0; margin-right: 2px; margin-top: 0; margin-bottom: 0; -unity-text-align: upper-left; flex-grow: 0; min-width: 135px; padding-top: 2px;" />
+                        <ui:VisualElement style="flex-direction: row; -unity-text-align: middle-left; flex-grow: 1; justify-content: space-between;">
+                            <ui:VisualElement style="flex-direction: row; flex-grow: 1; justify-content: space-around;">
+                                <ui:Label text="A" display-tooltip-when-elided="true" style="min-width: 15px; flex-basis: 15px; padding-top: 2px; -unity-text-align: upper-left; margin-right: 0;" />
+                                <uie:FloatField value="42.2" binding-path="simpleNoiseAnimation.x" style="min-width: 35px; flex-grow: 1; flex-shrink: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row; justify-content: space-around;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-direction: row; flex-grow: 1;">
+                                <ui:Label text="B" display-tooltip-when-elided="true" style="min-width: 15px; flex-basis: 15px; padding-top: 2px; -unity-text-align: upper-left; margin-left: 3px;" />
+                                <uie:FloatField value="42.2" binding-path="simpleNoiseAnimation.y" style="min-width: 35px; flex-grow: 1; flex-shrink: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: space-around;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-direction: row; flex-grow: 1;">
+                                <ui:Label text="C" display-tooltip-when-elided="true" style="min-width: 15px; flex-basis: 15px; padding-top: 2px; -unity-text-align: upper-left; margin-left: 3px;" />
+                                <uie:FloatField value="42.2" binding-path="simpleNoiseAnimation.z" style="min-width: 35px; flex-grow: 1; flex-shrink: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: space-around;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-direction: row; flex-grow: 1;">
+                                <ui:Label text="D" display-tooltip-when-elided="true" style="min-width: 15px; flex-basis: 15px; padding-top: 2px; -unity-text-align: upper-left; margin-left: 3px;" />
+                                <uie:FloatField value="42.2" binding-path="simpleNoiseAnimation.w" style="min-width: 35px; flex-grow: 1; flex-shrink: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: space-around;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <uie:FloatField label="Simple Noise Scale" value="42.2" name="SimpleNoiseScale" binding-path="simpleNoiseScale" />
+                    <ui:VisualElement name="SimpleNoiseAmountContainer" style="flex-direction: row; justify-content: space-between; margin-top: 0; margin-bottom: 0; margin-left: 0;">
+                        <ui:Slider picking-mode="Ignore" label="Simple Noise Amount" value="0.5" high-value="1" name="SimpleNoiseAmountSlider" binding-path="simpleNoiseAmount" style="flex-grow: 5;" />
+                        <uie:FloatField value="42.2" name="SimpleNoiseAmountValue" binding-path="simpleNoiseAmount" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="SimpleNoiseRemapContainer" style="flex-direction: row; justify-content: space-between; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">
+                        <ui:Slider picking-mode="Ignore" label="Simple Noise Remap" value="0.5" high-value="1" name="SimpleNoiseRemapSlider" binding-path="simpleNoiseRemap" style="flex-grow: 5;" />
+                        <uie:FloatField value="42.2" name="SimpleNoiseRemapValue" binding-path="simpleNoiseRemap" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="SimplexNoise">
+                    <ui:VisualElement name="SimplexNoiseAnimation" style="flex-direction: row; justify-content: flex-start; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;">
+                        <ui:Label text="Simplex Noise Animation" display-tooltip-when-elided="true" style="margin-left: 0; margin-right: 2px; margin-top: 0; margin-bottom: 0; -unity-text-align: upper-left; flex-grow: 0; min-width: 135px; padding-top: 2px;" />
+                        <ui:VisualElement style="flex-direction: row; -unity-text-align: middle-left; flex-grow: 1; justify-content: space-between;">
+                            <ui:VisualElement style="flex-direction: row; flex-grow: 1; justify-content: space-around;">
+                                <ui:Label text="A" display-tooltip-when-elided="true" style="min-width: 15px; flex-basis: 15px; padding-top: 2px; -unity-text-align: upper-left; margin-right: 0;" />
+                                <uie:FloatField value="42.2" binding-path="simplexNoiseAnimation.x" style="min-width: 35px; flex-grow: 1; flex-shrink: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row; justify-content: space-around;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-direction: row; flex-grow: 1;">
+                                <ui:Label text="B" display-tooltip-when-elided="true" style="min-width: 15px; flex-basis: 15px; padding-top: 2px; -unity-text-align: upper-left; margin-left: 3px;" />
+                                <uie:FloatField value="42.2" binding-path="simplexNoiseAnimation.y" style="min-width: 35px; flex-grow: 1; flex-shrink: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: space-around;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-direction: row; flex-grow: 1;">
+                                <ui:Label text="C" display-tooltip-when-elided="true" style="min-width: 15px; flex-basis: 15px; padding-top: 2px; -unity-text-align: upper-left; margin-left: 3px;" />
+                                <uie:FloatField value="42.2" binding-path="simplexNoiseAnimation.z" style="min-width: 35px; flex-grow: 1; flex-shrink: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: space-around;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-direction: row; flex-grow: 1;">
+                                <ui:Label text="D" display-tooltip-when-elided="true" style="min-width: 15px; flex-basis: 15px; padding-top: 2px; -unity-text-align: upper-left; margin-left: 3px;" />
+                                <uie:FloatField value="42.2" binding-path="simplexNoiseAnimation.w" style="min-width: 35px; flex-grow: 1; flex-shrink: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: space-around;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <uie:FloatField label="Simplex Noise Scale" value="42.2" name="SimplexNoiseScale" binding-path="simplexNoiseScale" />
+                    <ui:VisualElement name="SimplexNoiseAmountContainer" style="flex-direction: row; justify-content: space-between; margin-top: 0; margin-bottom: 0; margin-left: 0;">
+                        <ui:Slider picking-mode="Ignore" label="Simplex Noise Amount" value="0.5" high-value="1" name="SimplexNoiseAmountSlider" binding-path="simplexNoiseAmount" style="flex-grow: 5;" />
+                        <uie:FloatField value="42.2" name="SimplexNoiseAmountValue" binding-path="simplexNoiseAmount" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="SimplexNoiseRemapContainer" style="flex-direction: row; justify-content: space-between; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">
+                        <ui:Slider picking-mode="Ignore" label="Simplex Noise Remap" value="0.5" high-value="1" name="SimplexNoiseRemapSlider" binding-path="simplexNoiseRemap" style="flex-grow: 5;" />
+                        <uie:FloatField value="42.2" name="SimplexNoiseRemapValue" binding-path="simplexNoiseRemap" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="Voronoi">
+                    <ui:VisualElement name="VoronoiAnimation" style="flex-direction: row; justify-content: flex-start; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;">
+                        <ui:Label text="Voronoi Animation" display-tooltip-when-elided="true" style="margin-left: 0; margin-right: 2px; margin-top: 0; margin-bottom: 0; -unity-text-align: upper-left; flex-grow: 0; min-width: 135px; padding-top: 2px;" />
+                        <ui:VisualElement style="flex-direction: row; -unity-text-align: middle-left; flex-grow: 1; justify-content: space-between;">
+                            <ui:VisualElement style="flex-direction: row; flex-grow: 1; justify-content: space-around;">
+                                <ui:Label text="A" display-tooltip-when-elided="true" style="min-width: 15px; flex-basis: 15px; padding-top: 2px; -unity-text-align: upper-left; margin-right: 0;" />
+                                <uie:FloatField value="42.2" binding-path="voronoiAnimation.x" style="min-width: 35px; flex-grow: 1; flex-shrink: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row; justify-content: space-around;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-direction: row; flex-grow: 1;">
+                                <ui:Label text="B" display-tooltip-when-elided="true" style="min-width: 15px; flex-basis: 15px; padding-top: 2px; -unity-text-align: upper-left; margin-left: 3px;" />
+                                <uie:FloatField value="42.2" binding-path="voronoiAnimation.y" style="min-width: 35px; flex-grow: 1; flex-shrink: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: space-around;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-direction: row; flex-grow: 1;">
+                                <ui:Label text="C" display-tooltip-when-elided="true" style="min-width: 15px; flex-basis: 15px; padding-top: 2px; -unity-text-align: upper-left; margin-left: 3px;" />
+                                <uie:FloatField value="42.2" binding-path="voronoiAnimation.z" style="min-width: 35px; flex-grow: 1; flex-shrink: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: space-around;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-direction: row; flex-grow: 1;">
+                                <ui:Label text="D" display-tooltip-when-elided="true" style="min-width: 15px; flex-basis: 15px; padding-top: 2px; -unity-text-align: upper-left; margin-left: 3px;" />
+                                <uie:FloatField value="42.2" binding-path="voronoiAnimation.w" style="min-width: 35px; flex-grow: 1; flex-shrink: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: space-around;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <uie:FloatField label="Voronoi Scale" value="42.2" name="VoronoiScale" binding-path="voronoiScale" />
+                    <ui:VisualElement name="VoronoiAmountContainer" style="flex-direction: row; justify-content: space-between; margin-top: 0; margin-bottom: 0; margin-left: 0;">
+                        <ui:Slider picking-mode="Ignore" label="Voronoi Amount" value="0.5" high-value="1" name="VoronoiAmountSlider" binding-path="voronoiAmount" style="flex-grow: 5;" />
+                        <uie:FloatField value="42.2" name="VoronoiAmountValue" binding-path="voronoiAmount" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="VoronoiRemapContainer" style="flex-direction: row; justify-content: space-between; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">
+                        <ui:Slider picking-mode="Ignore" label="Voronoi Remap" value="0.5" high-value="1" name="VoronoiRemapSlider" binding-path="voronoiRemap" style="flex-grow: 5; justify-content: flex-start; flex-direction: row;" />
+                        <uie:FloatField value="42.2" name="VoronoiRemapValue" binding-path="voronoiRemap" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="CombinedNoiseRemapContainer" style="flex-direction: row; justify-content: space-between; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">
+                    <ui:Slider picking-mode="Ignore" label="Combined Noise Remap" value="0.5" high-value="1" name="CombinedNoiseRemapSlider" binding-path="combinedNoiseRemap" style="flex-grow: 5;" />
+                    <uie:FloatField value="42.2" name="CombinedNoiseRemapValue" binding-path="combinedNoiseRemap" style="flex-grow: 1;" />
+                </ui:VisualElement>
+                <uie:FloatField label="Floor Height" value="42.2" name="FloorHeight" binding-path="floorHeight" />
+                <uie:FloatField label="Floor Fade Ratio" value="42.2" name="FloorFadeRatio" binding-path="floorFadeRatio" />
+                <uie:FloatField label="Fade Size Ratio" value="42.2" name="FadeSizeRatio" binding-path="fadeSizeRatio" />
+                <uie:FloatField label="Camera Fade Offset" value="42.2" name="CameraFadeOffset" binding-path="cameraFadeOffset" />
+                <uie:FloatField label="Camera Fade Range" value="42.2" name="CameraFadeRange" x="4.17" binding-path="cameraFadeRange" />
+            </ui:VisualElement>
+        </ui:Foldout>
+    </ui:VisualElement>
+    <ui:VisualElement name="BasicModeContainer" style="display: flex;">
+        <ui:Foldout text="Emit Parameters" name="EmitParameters">
+            <ui:VisualElement name="EmitParamterContainer">
+                <uie:IntegerField label="Rate" value="40" name="Rate" binding-path="rate" />
+                <ui:VisualElement name="LifeTimeMinMaxSliderWithValue">
+                    <ui:Label text="Life Time Min-Max" display-tooltip-when-elided="true" name="MinMaxLabel" style="margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;" />
+                    <ui:VisualElement name="LimitContainer" style="flex-direction: row; justify-content: space-between; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;">
+                        <ui:VisualElement name="MinLimitContainer" style="flex-direction: row;">
+                            <ui:Label text="Min Limit" display-tooltip-when-elided="true" name="MinLimitLabel" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="MinLimit" focusable="true" binding-path="lifeTimeLimit.x" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="MaxLimitContainer" style="flex-direction: row;">
+                            <ui:Label text="Max Limit" display-tooltip-when-elided="true" name="MaxLimitLable" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="MaxLimit" binding-path="lifeTimeLimit.y" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:MinMaxSlider picking-mode="Ignore" min-value="10" max-value="12" low-limit="-10" high-limit="40" binding-path="lifeTimeMinMax" name="MinMaxSlider" />
+                    <ui:VisualElement name="ValueContainer" style="flex-direction: row; justify-content: space-between; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;">
+                        <ui:VisualElement name="MinContainer" style="flex-direction: row;">
+                            <ui:Label text="Min" display-tooltip-when-elided="true" name="MinLabel" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="Min" focusable="true" binding-path="lifeTimeMinMax.x" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="MaxContainer" style="flex-direction: row;">
+                            <ui:Label text="Max" display-tooltip-when-elided="true" name="MaxLable" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="Max" binding-path="lifeTimeMinMax.y" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="SizeMinMaxSliderWithValue">
+                    <ui:Label text="Size Min-Max" display-tooltip-when-elided="true" name="MinMaxLabel" style="margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;" />
+                    <ui:VisualElement name="LimitContainer" style="flex-direction: row; justify-content: space-between; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;">
+                        <ui:VisualElement name="MinLimitContainer" style="flex-direction: row;">
+                            <ui:Label text="Min Limit" display-tooltip-when-elided="true" name="MinLimitLabel" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="MinLimit" focusable="true" binding-path="sizeLimit.x" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="MaxLimitContainer" style="flex-direction: row;">
+                            <ui:Label text="Max Limit" display-tooltip-when-elided="true" name="MaxLimitLable" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="MaxLimit" binding-path="sizeLimit.y" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:MinMaxSlider picking-mode="Ignore" min-value="10" max-value="12" low-limit="-10" high-limit="40" name="MinMaxSlider" binding-path="sizeMinMax" />
+                    <ui:VisualElement name="ValueContainer" style="flex-direction: row; justify-content: space-between; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;">
+                        <ui:VisualElement name="MinContainer" style="flex-direction: row;">
+                            <ui:Label text="Min" display-tooltip-when-elided="true" name="MinLabel" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="Min" focusable="true" binding-path="sizeMinMax.x" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="MaxContainer" style="flex-direction: row;">
+                            <ui:Label text="Max" display-tooltip-when-elided="true" name="MaxLable" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
+                            <uie:FloatField value="42.2" name="Max" binding-path="sizeMinMax.y" style="min-width: 50px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Foldout>
+        <ui:Foldout text="Projection Parameters" name="ProjectionParameters">
+            <ui:VisualElement name="ProjectionParameterContainer">
+                <uie:ObjectField label="Beam Light Map" name="BeamLightMap" type="UnityEngine.Texture, UnityEngine.CoreModule" binding-path="beamLightMap" />
+                <uie:FloatField label="Intensity" value="2.75" name="Intensity" binding-path="intensity" />
+                <ui:Toggle label="Enable UV Correction" value="true" name="EnableUVCorrection" binding-path="enableUvCorrection" />
+                <uie:ColorField label="Low Cut Threshold" value="#00000000" name="LowCutThreshold" binding-path="lowCutThreshold" />
+            </ui:VisualElement>
+        </ui:Foldout>
+        <ui:Foldout text="Shader Parameters" name="ShaderParameters">
+            <ui:VisualElement name="ShaderParametersContainer">
+                <uie:ColorField label="Base Color" value="#FFFFFFFF" name="BaseColor" hdr="true" binding-path="baseColor" />
+                <uie:FloatField label="Base Intensity" value="0" name="BaseIntensity" binding-path="baseIntensity" />
+                <uie:CurveField label="Age Alpha Curve" name="AgeAlphaCurve" binding-path="ageAlphaCurve" />
+                <ui:VisualElement name="NoiseSetting">
+                    <ui:VisualElement name="DensityValueSliderContainer" style="flex-direction: row; justify-content: space-between; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">
+                        <ui:Slider picking-mode="Ignore" label="Noise Density" value="0.5" high-value="1" name="Slider" binding-path="noiseDensity" style="flex-grow: 5; justify-content: flex-start; flex-direction: row;" />
+                        <uie:FloatField value="42.2" name="Value" binding-path="noiseDensity" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="RoughnessValueSliderContainer" style="flex-direction: row; justify-content: space-between; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">
+                        <ui:Slider picking-mode="Ignore" label="Noise Roughness" value="0.5" high-value="1" name="Slider" binding-path="noiseRoughness" style="flex-grow: 5; justify-content: flex-start; flex-direction: row; height: 18px;" />
+                        <uie:FloatField value="42.2" name="Value" binding-path="noiseRoughness" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ScaleValueSliderContainer" style="flex-direction: row; justify-content: space-between; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">
+                        <ui:Slider picking-mode="Ignore" label="Noise Scale" value="0.5" high-value="1" name="Slider" binding-path="noiseScale" style="flex-grow: 5; justify-content: flex-start; flex-direction: row;" />
+                        <uie:FloatField value="42.2" name="Value" binding-path="noiseRoughness" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <uie:Vector2Field label="Noise Flow Value" name="NoiseFlowValue" binding-path="noiseFlowValue" />
+                </ui:VisualElement>
+                <uie:FloatField label="Floor Height" value="42.2" name="FloorHeight" binding-path="floorHeight" />
+                <uie:FloatField label="Floor Fade Ratio" value="42.2" name="FloorFadeRatio" binding-path="floorFadeRatio" />
+                <uie:FloatField label="Fade Size Ratio" value="42.2" name="FadeSizeRatio" binding-path="fadeSizeRatio" />
+                <uie:FloatField label="Camera Fade Offset" value="42.2" name="CameraFadeOffset" binding-path="cameraFadeOffset" />
+                <uie:FloatField label="Camera Fade Range" value="42.2" name="CameraFadeRange" x="4.17" binding-path="cameraFadeRange" />
+            </ui:VisualElement>
+        </ui:Foldout>
+    </ui:VisualElement>
+</ui:UXML>
