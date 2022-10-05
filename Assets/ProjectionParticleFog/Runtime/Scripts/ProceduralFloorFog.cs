@@ -65,6 +65,7 @@ namespace Kuyuri.ProjectionParticleFog
 
             var vfx = Resources.Load<VisualEffectAsset>("ProceduralFloorFog");
             var vfxObj = new GameObject("ProceduralFloorFogVFX");
+            vfxObj.layer = LayerMask.NameToLayer("Ignore Raycast");
             visualEffect = vfxObj.AddComponent<VisualEffect>();
             visualEffect.visualEffectAsset = vfx;
             _visualEffect = visualEffect;
@@ -194,6 +195,11 @@ namespace Kuyuri.ProjectionParticleFog
 #if UNITY_EDITOR
             GetInitialProperties();
 #endif
+        }
+
+        private void OnEnable()
+        {
+            _fieldInfos = typeof(ProceduralFloorFog).GetFields(BindingFlags.Public | BindingFlags.Instance);
         }
 
         public void Update()

@@ -256,7 +256,7 @@
                     </ui:VisualElement>
                     <ui:VisualElement name="ScaleValueSliderContainer" style="flex-direction: row; justify-content: space-between; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">
                         <ui:Slider picking-mode="Ignore" label="Noise Scale" value="0.5" high-value="1" name="Slider" binding-path="noiseScale" style="flex-grow: 5; justify-content: flex-start; flex-direction: row;" />
-                        <uie:FloatField value="42.2" name="Value" binding-path="noiseRoughness" style="flex-grow: 1;" />
+                        <uie:FloatField value="42.2" name="Value" binding-path="noiseScale" style="flex-grow: 1;" />
                     </ui:VisualElement>
                     <uie:Vector2Field label="Noise Flow Value" name="NoiseFlowValue" binding-path="noiseFlowValue" />
                 </ui:VisualElement>
