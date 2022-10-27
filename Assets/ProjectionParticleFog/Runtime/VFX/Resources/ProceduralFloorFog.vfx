@@ -483,8 +483,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: FadeSizeRatio
-    path: FadeSizeRatio
+  - name: ParticleSizeRatio
+    path: ParticleSizeRatio
     tooltip: 
     sheetType: m_Float
     realType: Single
@@ -636,7 +636,7 @@ MonoBehaviour:
     enumValues: []
     descendantCount: 0
   m_ImportDependencies: []
-  m_GraphVersion: 8
+  m_GraphVersion: 9
   m_ResourceVersion: 1
   m_SubgraphDependencies: []
   m_CategoryPath: 
@@ -3884,7 +3884,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661615045}
-  m_ExposedName: FadeSizeRatio
+  m_ExposedName: ParticleSizeRatio
   m_Exposed: 1
   m_Order: 27
   m_Category: ShaderParamters
@@ -6240,14 +6240,18 @@ MonoBehaviour:
   uvMode: 0
   useSoftParticle: 0
   vfxSystemSortPriority: 0
-  sort: 0
+  sort: 2
+  sortMode: 0
+  revertSorting: 0
   indirectDraw: 0
   computeCulling: 0
   frustumCulling: 0
   castShadows: 0
   useExposureWeight: 0
   flipbookLayout: 0
-  shaderGraph: {fileID: 4333940904281232215, guid: d3e608e627681394f964dfefe58e11a7, type: 3}
+  needsOwnSort: 0
+  shaderGraph: {fileID: 4333940904281232215, guid: d3e608e627681394f964dfefe58e11a7,
+    type: 3}
   materialSettings:
     m_PropertyNames:
     - _QueueOffset
@@ -8943,7 +8947,8 @@ MonoBehaviour:
   - {fileID: 8926484042661615553}
   m_OutputSlots:
   - {fileID: 8926484042661615557}
-  m_Subgraph: {fileID: 5371698745253816930, guid: 456820c94e99f4c418c12d6da90c007b, type: 3}
+  m_Subgraph: {fileID: 5371698745253816930, guid: 456820c94e99f4c418c12d6da90c007b,
+    type: 3}
 --- !u!114 &8926484042661615549
 MonoBehaviour:
   m_ObjectHideFlags: 0

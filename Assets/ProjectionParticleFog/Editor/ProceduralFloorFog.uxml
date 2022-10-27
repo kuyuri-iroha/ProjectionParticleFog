@@ -12,7 +12,7 @@
                     <ui:VisualElement name="LimitContainer" style="flex-direction: row; justify-content: space-between; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;">
                         <ui:VisualElement name="MinLimitContainer" style="flex-direction: row;">
                             <ui:Label text="Min Limit" display-tooltip-when-elided="true" name="MinLimitLabel" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
-                            <uie:FloatField value="42.2" name="MinLimit" focusable="true" binding-path="lifeTimeLimit.x" style="min-width: 50px;" />
+                            <uie:FloatField value="30.2" name="MinLimit" focusable="true" binding-path="lifeTimeLimit.x" style="min-width: 50px;" />
                         </ui:VisualElement>
                         <ui:VisualElement name="MaxLimitContainer" style="flex-direction: row;">
                             <ui:Label text="Max Limit" display-tooltip-when-elided="true" name="MaxLimitLable" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
@@ -36,7 +36,7 @@
                     <ui:VisualElement name="LimitContainer" style="flex-direction: row; justify-content: space-between; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;">
                         <ui:VisualElement name="MinLimitContainer" style="flex-direction: row;">
                             <ui:Label text="Min Limit" display-tooltip-when-elided="true" name="MinLimitLabel" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
-                            <uie:FloatField value="42.2" name="MinLimit" focusable="true" binding-path="sizeLimit.x" style="min-width: 50px;" />
+                            <uie:FloatField value="28.6" name="MinLimit" focusable="true" binding-path="sizeLimit.x" style="min-width: 50px;" />
                         </ui:VisualElement>
                         <ui:VisualElement name="MaxLimitContainer" style="flex-direction: row;">
                             <ui:Label text="Max Limit" display-tooltip-when-elided="true" name="MaxLimitLable" style="-unity-text-align: middle-left; margin-right: 5px; font-size: 10px;" />
@@ -262,7 +262,7 @@
                 </ui:VisualElement>
                 <uie:FloatField label="Floor Height" value="42.2" name="FloorHeight" binding-path="floorHeight" />
                 <uie:FloatField label="Floor Fade Ratio" value="42.2" name="FloorFadeRatio" binding-path="floorFadeRatio" />
-                <uie:FloatField label="Fade Size Ratio" value="42.2" name="FadeSizeRatio" binding-path="fadeSizeRatio" />
+                <uie:FloatField label="Particle Size Ratio" value="42.2" name="ParticleSizeRatio" binding-path="particleSizeRatio" />
                 <uie:FloatField label="Camera Fade Offset" value="42.2" name="CameraFadeOffset" binding-path="cameraFadeOffset" />
                 <uie:FloatField label="Camera Fade Range" value="42.2" name="CameraFadeRange" x="4.17" binding-path="cameraFadeRange" />
             </ui:VisualElement>

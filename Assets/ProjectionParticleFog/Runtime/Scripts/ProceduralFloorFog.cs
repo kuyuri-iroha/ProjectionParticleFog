@@ -38,7 +38,7 @@ namespace Kuyuri.ProjectionParticleFog
         public float combinedNoiseRemap;
         public float floorHeight;
         public float floorFadeRatio;
-        public float fadeSizeRatio;
+        public float particleSizeRatio;
         public float cameraFadeOffset;
         public float cameraFadeRange;
         

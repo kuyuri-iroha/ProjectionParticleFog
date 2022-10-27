@@ -51,6 +51,10 @@ namespace Kuyuri.ProjectionParticleFog
             var maxLimit = minMaxContainer.Q<FloatField>("MaxLimit");
             minMaxSlider.RegisterCallback<GeometryChangedEvent>(evt =>
             {
+                if (maxLimit.value <= minLimit.value)
+                {
+                    minLimit.value = maxLimit.value - 1;
+                }
                 minMaxSlider.lowLimit = minLimit.value;
                 minMaxSlider.highLimit = maxLimit.value;
             });

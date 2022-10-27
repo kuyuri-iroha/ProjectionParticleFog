@@ -1,0 +1,16 @@
+{
+    "name": "kuyuri.projection-particle-fog.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b9fb4ffe47d400443b553e52e478672c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
