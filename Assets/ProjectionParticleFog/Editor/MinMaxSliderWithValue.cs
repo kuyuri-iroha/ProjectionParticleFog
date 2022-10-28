@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.UIElements;
@@ -7,7 +8,7 @@ using UnityEngine.UIElements;
 
 namespace Kuyuri.UIToolkitExtensions
 {
-#if UNITY_EDITOR
+
     public class MinMaxSliderWithValue : VisualElement
     {
         public new class UxmlFactory : UxmlFactory<MinMaxSliderWithValue, UxmlTraits>
@@ -335,5 +336,8 @@ namespace Kuyuri.UIToolkitExtensions
             _slider.highLimit = highLimit;
         }
     }
-#endif
+
 }
+
+
+#endif

@@ -1,4 +1,5 @@
-﻿// Decompiled with JetBrains decompiler
+﻿#if UNITY_EDITOR
+// Decompiled with JetBrains decompiler
 // Type: UnityEditor.UIElements.Vector4Field
 // Assembly: UnityEditor.UIElementsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: B91B1302-FAC5-442B-87D8-C7D7002F3AB8
@@ -123,3 +124,5 @@ namespace Kuyuri.UIToolkitExtensions
     }
   }
 }
+
+#endif

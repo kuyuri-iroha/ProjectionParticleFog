@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.UIElements;
@@ -177,3 +178,5 @@ namespace Kuyuri.UIToolkitExtensions
     }
   }
 }
+
+#endif
